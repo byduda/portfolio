@@ -1,0 +1,11 @@
+gerar paleta de cor hexadecimal
+https://coolors.co/ ou https://colorhunt.co/
+
+icons
+https://fonts.google.com/icons
+
+fonts
+https://fonts.google.com/
+
+flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/

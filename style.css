@@ -1,0 +1,30 @@
+/*comentário em CSS, não será exibido na página*/
+/*o documento é feito na linguagem de estilização CSS)*/
+
+* /*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/ {
+    margin: 0; /*altera a margem de todos os elementos da página para 0*/
+    padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
+
+}
+
+body /*estilizar a tag body do index.html*/ {
+    height: 100vh; /*altura do body, o VH (viewport) é utilizado para telas responsivas*/
+    box-sizing: border-box; /*inclui o padding e a borda no cálculo da largura e altura do elemento*/
+    background-color: #F3F3F3; /*altera a cor do fundo da página*/
+    color: #000; /*altera a cor do texto*/
+    font-family: "Playfair Display"
+}
+
+h2 /*estilizar as tags h2 e h3 do index.html*/ {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+h3 /*estilizar as tags h2 e h3 do index.html*/ {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 16px;
+}
