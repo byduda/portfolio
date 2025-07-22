@@ -1,6 +1,8 @@
 /*comentário em CSS, não será exibido na página*/
 /*o documento é feito na linguagem de estilização CSS)*/
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 * /*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/ {
     margin: 0; /*altera a margem de todos os elementos da página para 0*/
     padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
@@ -10,21 +12,103 @@
 body /*estilizar a tag body do index.html*/ {
     height: 100vh; /*altura do body, o VH (viewport) é utilizado para telas responsivas*/
     box-sizing: border-box; /*inclui o padding e a borda no cálculo da largura e altura do elemento*/
-    background-color: #F3F3F3; /*altera a cor do fundo da página*/
+    background-color: #D9D9D9; /*altera a cor do fundo da página*/
     color: #000; /*altera a cor do texto*/
-    font-family: "Playfair Display"
 }
 
-h2 /*estilizar as tags h2 e h3 do index.html*/ {
-    font-family: "Playfair Display";
-    font-weight: 700;
-    text-transform: uppercase;
+main.container {
+    margin: 5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 60px 80px; /*altera o espaçamento interno do elemento*/
+    background-color: #F3F3F3; /*altera a cor de fundo do elemento*/
+    border: 2px solid #e4e4e4;
+
+}q
+
+section.apresentacao {
+    width: 615px;
+}
+
+h1.apresentacao_conteudo_titulo {
+    font-family: 'Playfair Display'; /*altera a fonte do texto*/
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 400; /*altera o peso da fonte*/
+    font-size: 64px; /*altera o tamanho da fonte*/
+    text-transform: uppercase; /*altera o tamanho da fonte e transforma o texto em maiúsculo*/
+    line-height: 85px; /*altera o tamanho da linha*/
+    color: #000000; /*altera a cor do texto*/
 
 }
 
-h3 /*estilizar as tags h2 e h3 do index.html*/ {
-    font-family: "Playfair Display";
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 16px;
+h2.apresentacao_conteudo_subtitulo {
+    font-family: 'Playfair Display'; /*altera a fonte do texto*/
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 400; /*altera o peso da fonte*/
+    font-size: 64px; /*altera o tamanho da fonte*/
+    text-transform: uppercase; /*altera o tamanho da fonte e transforma o texto em maiúsculo*/
+    line-height: 85px; /*altera o tamanho da linha*/
+    letter-spacing: 0.16em; /*altera o espaçamento entre as letras*/
+    color: #000000; /*altera a cor do texto*/
+
+}
+
+div.linha {
+    width: 603px;
+    height: 0px;
+    border: 5px solid #B4918F;
+    transform: rotate(-180deg);
+    margin: 33px 0;
+
+}
+
+p.apresentacao_conteudo_texto {
+    font-family: 'Playfair Display';
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 500; /*altera o peso da fonte*/
+    font-size: 20px; /*altera o tamanho da fonte*/
+    line-height: 27px; /*altera o tamanho da linha*/
+    text-align: justify; /*altera o alinhamento do texto*/
+    color: #000000; /*altera a cor do texto*/
+
+}
+
+div.apresentacao_redes_sociais {
+    margin: 33px 0;
+    display: flex; /*altera o display do elemento para flexbox*/
+    justify-content: flex-start; /*alinha os itens no início do container*/
+    gap: 30px; /*espaçamento entre os links*/
+
+}
+
+a.github {
+    width: 32px;
+    height: 32px;
+    background-image: url(assets/GithubLogo.png);
+
+}
+
+a.linkedin {
+    width: 32px;
+    height: 32px;
+    background-image: url(assets/LinkedinLogo.png);
+
+}
+
+a.figma {
+    width: 32px;
+    height: 32px;
+    background-image: url(assets/FigmaLogo.png);
+
+}
+
+img.imagem_perfil {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%; /*deixa a imagem com bordas arredondadas*/
+    border: 8px solid #B4918F;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-left: 30px; /*altera a margem esquerda da imagem*/
+
 }

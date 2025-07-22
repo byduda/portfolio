@@ -3,7 +3,7 @@
 <!DOCTYPE html><!-- o documento é feito na linguagem de marcação HTML) -->
 <html lang="pt-br"> <!-- o idioma utilizado na página será português brasileiro -->
 
-    <head><!-- parte que não será exibida na página -->
+    <head><!-- head parte que não será exibida na página -->
         <meta charset="UTF-8"> <!-- exibe todos os assentos, pontuações e carácteres especiais -->
         <meta http-equiv="X-UA-Compatible" content="=IE-Edge"> <!-- utilize a versão mais recente do Edge -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibe a página nas escalas dos dispositivos abertos (desktop ou mobile) -->
@@ -11,23 +11,30 @@
         <title>Título da Página</title><!-- título da página -->
     </head>
 
-    <body><!-- parte que será exibida na página -->
+    <body><!-- body parte que será exibida na página -->
+
         <header><!-- parte de cima da página, geralmente o navegador/menu/banner -->
         </header>
 
-        <main><!-- parte do meio da página, geralmente o texto/imagens/conteúdo -->
-            <h2>Hello World,</h2>
-            <h3>{I'm Duda}</h3>
-            <p>Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>
-            <p>Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p>
-            <p>Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p>
-            <a href="link">Âncora link 1</a>
-            <a href="link">Âncora link 2</a>
-            <img src="duda.jpg" alt="Mulher jovem de cabelo vermelho ondulado, maquiagem com delineador preto marcante, piercing no septo, sobrancelha direita e labret vertical no lábio inferior, veste uma blusa preta e colares prata.">
-        </main>
+    <main class="container"> <!-- main parte do meio da página, geralmente o texto/imagens/conteúdo -->
+        <section class="apresentacao">
+            <h1 class="apresentacao_conteudo_titulo">Hello World,</h1>
+            <h2 class="apresentacao_conteudo_subtitulo">{ I'm Duda }</h2>
+            <div class = "linha"></div>
+            <p class="apresentacao_conteudo_texto">Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>
+            <p class="apresentacao_conteudo_texto">Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p>
+            <p class="apresentacao_conteudo_texto">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p>
+            <div class="apresentacao_redes_sociais">
+                <a class="github" href="https://github.com/seuusuario" target="_blank"></a>
+                <a class="linkedin" href="https://linkedin.com/in/seuusuario" target="_blank"></a>
+                <a class="figma" href="https://figma.com/@seuusuario" target="_blank"></a>
+            </div>
+        </section>
+        <img class="imagem_perfil" src="assets/duda.jpg" alt="Mulher jovem de cabelo vermelho ondulado, maquiagem com delineador preto marcante, piercing no septo, sobrancelha direita e labret vertical no lábio inferior, veste uma blusa preta e colares prata.">    </main>
 
-        <footer><!-- parte do fim da página, geralmente rodapé/direitos autorais/desenvolvido por-->
-        </footer>
-    </body>
+    <footer><!-- footer parte do fim da página, geralmente rodapé/direitos autorais/desenvolvido por-->
+    </footer>
     
+</body>
+
 </html>
