@@ -7,34 +7,46 @@
         <meta charset="UTF-8"> <!-- exibe todos os assentos, pontuações e carácteres especiais -->
         <meta http-equiv="X-UA-Compatible" content="=IE-Edge"> <!-- utilize a versão mais recente do Edge -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibe a página nas escalas dos dispositivos abertos (desktop ou mobile) -->
-        <link rel="stylesheet" href="style.css"><!-- utiliza a linguagem de estilização CSS para a página -->
-        <title>Título da Página</title><!-- título da página -->
+        <link rel="stylesheet" href="./styles/style.css"><!-- utiliza a linguagem de estilização CSS para a página -->
+        <title>Home</title><!-- título da página -->
     </head>
 
     <body><!-- body parte que será exibida na página -->
 
-        <header><!-- parte de cima da página, geralmente o navegador/menu/banner -->
+        <header class="cabecalho"><!-- parte de cima da página, geralmente o navegador/menu/banner -->
+            <nav class="menu"><!-- menu de navegação -->
+                <a class="home" href="index.html"></a>
+                <a class="templates" href="templates.html"></a>
+                <a class="pixel_art" href="link"></a>
+                <a class="curriculum" href="link"></a>
+            </nav>
         </header>
 
     <main class="container"> <!-- main parte do meio da página, geralmente o texto/imagens/conteúdo -->
         <section class="apresentacao">
-            <h1 class="apresentacao_conteudo_titulo">Hello World,</h1>
-            <h2 class="apresentacao_conteudo_subtitulo">{ I'm Duda }</h2>
+            <h1 class="apresentacao_titulo">Hello World,</h1>
+            <h2 class="apresentacao_subtitulo">{ I'm Duda }</h2>
             <div class = "linha"></div>
-            <p class="apresentacao_conteudo_texto">Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>
-            <p class="apresentacao_conteudo_texto">Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p>
-            <p class="apresentacao_conteudo_texto">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p>
+            <p class="frase">"Quando você tem medo e faz mesmo assim, isso é coragem. — Coraline."</h3>
+            <p class="apresentacao_texto">Sou uma profissional de 26 anos, apaixonada por tecnologia, design, gatinhos e Harry Potter.</p>
+            <p class="apresentacao_texto">Com uma sólida bagagem em Suporte e gerenciamento de Banco de Dados, aprendi a importância da estrutura, da lógica e de resolver problemas de forma eficiente. Agora, estou canalizando todo esse conhecimento para a área de desenvolvimento.</p>
+            <p class="apresentacao_texto">Atualmente, na dupla graduação em Tecnologia da Informação e Engenharia de Software pela UNIVESP, meu grande objetivo é construir pontes entre as pessoas e a tecnologia. Por isso, estou me especializando em desenvolvimento Front-End, com um carinho especial por UI/UX, buscando criar interfaces que não sejam apenas funcionais, mas também intuitivas e agradáveis.</p>
             <div class="apresentacao_redes_sociais">
                 <a class="github" href="https://github.com/seuusuario" target="_blank"></a>
                 <a class="linkedin" href="https://linkedin.com/in/seuusuario" target="_blank"></a>
                 <a class="figma" href="https://figma.com/@seuusuario" target="_blank"></a>
+                <a class="whatsapp" href="https://figma.com/@seuusuario" target="_blank"></a>
+                <a class="email" href="https://figma.com/@seuusuario" target="_blank"></a>
             </div>
         </section>
-        <img class="imagem_perfil" src="assets/duda.jpg" alt="Mulher jovem de cabelo vermelho ondulado, maquiagem com delineador preto marcante, piercing no septo, sobrancelha direita e labret vertical no lábio inferior, veste uma blusa preta e colares prata.">    </main>
+        <img class="imagem_perfil" src="./assets/Duda.png" alt="Mulher jovem de cabelo vermelho ondulado, maquiagem com delineador preto marcante, piercing no septo, sobrancelha direita e labret vertical no lábio inferior, veste uma blusa preta e colares prata.">
+        <div class = "watermark_home"></div>
+    </main>
 
-    <footer><!-- footer parte do fim da página, geralmente rodapé/direitos autorais/desenvolvido por-->
+    <footer class ="rodape"><!-- footer parte do fim da página, geralmente rodapé/direitos autorais/desenvolvido por-->
+        <p>Desenvolvido por Duda Curto</p>
+        <p>© byduda</p>
     </footer>
     
 </body>
-
 </html>

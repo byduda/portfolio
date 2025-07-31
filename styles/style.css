@@ -1,0 +1,369 @@
+/*comentário em CSS, não será exibido na página*/
+/*o documento é feito na linguagem de estilização CSS)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand&display=swap');
+
+* /*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/ {
+    margin: 0; /*altera a margem de todos os elementos da página para 0*/
+    padding: 0; /*altera o espaçamento interno de todos os elementos da página  para 0*/
+
+}
+
+:root{ /*variáveis globais, podem ser utilizadas em qualquer lugar do CSS*/
+    --cor-primaria: #8B4C5F; /*cor primária do site*/
+    --cor-secundaria: #F3F3F3; /*cor secundária do site*/
+    --cor-borda: #E4E4E4; /*cor da borda*/
+    --cor-texto: #000000; /*cor do texto*/
+    --cor-fundo: #D9D9D9; /*cor de fundo da página*/
+
+}
+
+header.cabecalho{
+    width: 60px; /* largura da barra lateral */
+    height: 100vh; /* altura total da tela */
+    position: fixed; /* fixa na lateral */
+    top: 0; /* encosta no topo */
+    background-image: url(../assets/Menu.png); /* imagem de fundo da barra lateral */
+    background-repeat: no-repeat;
+    background-position: center; /* centraliza a imagem na barra */
+    z-index: 10; /* garante que fique acima dos outros elementos */
+}
+
+nav.menu {
+    display: flex; /*altera o display do elemento para flexbox*/
+    flex-direction: column; /*alinha os itens em coluna*/
+    align-items: center; /*alinha os itens no centro do container*/
+    gap: 100px; /*espaçamento entre os links*/
+    margin-top: 50px; /*altera a margem superior do menu*/
+}
+
+a.home {
+    background-image: url(../assets/Home.png);
+    width: 34px;
+    height: 32px;
+    display: inline-block;
+    background-position: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+a.home:hover { /*altera o ícone home quando o mouse passa por cima*/
+    background-image: url(../assets/Home1.png);
+    transform: translateX(20px) scale(1.05);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-position: center;
+    background-color: var(--cor-fundo);
+    border-radius: 50%;
+    box-shadow: 0 0 0 16px var(--cor-fundo); /* círculo maior ao redor do ícone */
+
+}
+
+a.home::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
+    content: "home";
+    position: absolute;
+    right: 40px; /* distância do ícone, ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+a.home:hover::after {  /* exibe o texto ao passar o mouse */
+    opacity: 1;
+}
+
+a.templates {
+    background-image: url(../assets/Templates.png);
+    width: 30px;
+    height: 28px;
+    display: inline-block;
+    background-position: center;
+    transition: 0.3s;
+    position: relative;
+
+}
+
+a.templates:hover { /*altera o ícone templates quando o mouse passa por cima*/
+    background-image: url(../assets/Templates1.png);
+    transform: translateX(20px) scale(1.05);
+    width: 30.1px;
+    height: 30.1px;
+    display: inline-block;
+    background-position: bottom;
+    background-color: var(--cor-fundo);
+    border-radius: 50%;
+    box-shadow: 0 0 0 17px var(--cor-fundo); /* círculo maior ao redor do ícone */
+
+}
+
+a.templates::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
+    content: "templates";
+    position: absolute;
+    right: 25px; /* distância do ícone, ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+a.templates:hover::after {  /* exibe o texto ao passar o mouse */
+    opacity: 1;
+}
+
+a.pixel_art {
+    background-image: url(../assets/PixelArt.png);
+    width: 30px;
+    height: 28px;
+    display: inline-block;
+    background-position: center;
+    transition: 0.3s;
+    position: relative;
+
+}
+
+a.pixel_art:hover { /*altera o ícone templates quando o mouse passa por cima*/
+    background-image: url(../assets/PixelArt1.png);
+    transform: translateX(20px) scale(1.05);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-position: bottom;
+    background-color: var(--cor-fundo);
+    border-radius: 50%;
+    box-shadow: 0 0 0 16px var(--cor-fundo); /* círculo maior ao redor do ícone */
+
+}
+
+a.pixel_art::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
+    content: "pixelart";
+    position: absolute;
+    right: 30px; /* distância do ícone, ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+a.pixel_art:hover::after {  /* exibe o texto ao passar o mouse */
+    opacity: 1;
+}
+
+body /*estilizar a tag body do index.html*/ {
+    height: 100vh; /*altura do body, o VH (viewport) é utilizado para telas responsivas*/
+    box-sizing: border-box; /*inclui o padding e a borda no cálculo da largura e altura do elemento*/
+    background-color: var(--cor-fundo); /*altera a cor do fundo da página*/
+    background-image: url(https://byduda.github.io/flora-acessorios1/assets/imgs/container-bg.jpg); /*altera a imagem de fundo da página*/
+}
+
+main.container {
+    margin: 60px 0 60px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 0px 30px 130px; /*altera o espaçamento interno do elemento*/
+    background-color: var(--cor-secundaria); /*altera a cor de fundo do elemento*/
+    border: 2px solid var(--cor-borda);
+    background-image: url(../assets/WatermarkHome.png);
+    background-repeat: no-repeat;
+    background-position: right 10px bottom -30px; /*altera a posição da imagem de fundo*/
+    background-size: 600px 600px;
+    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.15), /* sombra embaixo */
+                0px -4px 16px 0px rgba(0,0,0,0.10), /* sombra em cima */
+                4px 0px 16px 0px rgba(0,0,0,0.10),  /* sombra à direita */
+                -4px 0px 16px 0px rgba(0,0,0,0.10); /* sombra à esquerda */
+}
+
+section.apresentacao {
+    width: 555px;
+}
+
+h1.apresentacao_titulo {
+    font-family: 'Playfair Display'; /*altera a fonte do texto*/
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 400; /*altera o peso da fonte*/
+    font-size: 64px; /*altera o tamanho da fonte*/
+    text-transform: uppercase; /*altera o tamanho da fonte e transforma o texto em maiúsculo*/
+    line-height: 85px; /*altera o tamanho da linha*/
+    color: var(--cor-texto); /*altera a cor do texto*/
+
+}
+
+h2.apresentacao_subtitulo {
+    font-family: 'Playfair Display'; /*altera a fonte do texto*/
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 400; /*altera o peso da fonte*/
+    font-size: 64px; /*altera o tamanho da fonte*/
+    text-transform: uppercase; /*altera o tamanho da fonte e transforma o texto em maiúsculo*/
+    line-height: 85px; /*altera o tamanho da linha*/
+    letter-spacing: 0.16em; /*altera o espaçamento entre as letras*/
+    color: var(--cor-texto); /*altera a cor do texto*/
+
+}
+
+div.linha {
+    width: 550px;
+    height: 0px;
+    border: 5px solid var(--cor-primaria);
+    transform: rotate(-180deg);
+    margin: 33px 0;
+
+}
+
+p.frase {
+    font-family: 'Playfair Display'; /*altera a fonte do texto*/
+    font-style: italic; /*altera o estilo da fonte para itálico*/
+    font-weight: 300; /*altera o peso da fonte*/
+    font-size: 15px; /*altera o tamanho da fonte*/
+    line-height: 30px; /*altera o tamanho da linha*/
+    text-align: center; /*altera o alinhamento do texto para centralizado*/
+    color: grey; /*altera a cor do texto*/
+    margin-bottom: 20px;
+
+}
+
+p.apresentacao_texto {
+    font-family: 'Quicksand';
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 500; /*altera o peso da fonte*/
+    font-size: 15px; /*altera o tamanho da fonte*/
+    line-height: 27px; /*altera o tamanho da linha*/
+    text-align: justify; /*altera o alinhamento do texto*/
+    color: var(--cor-texto); /*altera a cor do texto*/
+    margin-bottom: 10px;
+
+}
+
+div.apresentacao_redes_sociais {
+    margin: 33px 0;
+    display: flex; /*altera o display do elemento para flexbox*/
+    justify-content: flex-start; /*alinha os itens no início do container*/
+    gap: 30px; /*espaçamento entre os links*/
+
+
+}
+
+a.github { /*link para o github*/
+    width: 32px;
+    height: 32px;
+    background-image: url(../assets/GithubLogo.png);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+}
+
+a.github:hover { /*altera o ícone github quando o mouse passa por cima*/
+    filter: grayscale(100%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
+
+}
+
+a.linkedin { /*link para o linkedin*/
+    width: 32px;
+    height: 32px;
+    background-image: url(../assets/LinkedinLogo.png);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+}
+
+a.linkedin:hover { /*altera o ícone linkedin quando o mouse passa por cima*/
+    filter: grayscale(100%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
+
+}
+
+a.figma { /*link para o figma*/
+    width: 32px;
+    height: 32px;
+    background-image: url(../assets/FigmaLogo.png);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+
+}
+
+a.figma:hover { /*altera o ícone figma quando o mouse passa por cima*/
+    filter: grayscale(100%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
+
+    }
+
+a.whatsapp { /*link para o whatsapp*/
+    width: 32px;
+    height: 32px;
+    background-image: url(../assets/WhatsAppLogo.png);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+
+}
+
+a.whatsapp:hover { /*altera o ícone whatsapp quando o mouse passa por cima*/
+    filter: grayscale(100%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
+
+}
+
+a.email { /*link para o email*/
+    width: 32px;
+    height: 32px;
+    background-image: url(../assets/EmailLogo.png);
+    transition-duration: 0.20s; /*altera a duração da transição na entrada e saída do mouse*/
+
+
+}
+
+a.email:hover { /*altera o ícone email quando o mouse passa por cima*/
+    filter: grayscale(100%);
+    transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
+
+}
+
+img.imagem_perfil {
+    width: 310px;
+    height: 310px;
+    object-fit: cover; /* faz a imagem preencher todo o espaço disponível */
+    border-radius: 50%; /*deixa a imagem com bordas arredondadas*/
+    border: 8px solid var(--cor-primaria);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-left: 30px; /*altera a margem esquerda da imagem*/
+    transition-duration: 0.30s; /*altera a duração da transição*/
+
+}
+
+img.imagem_perfil:hover { /*altera a imagem quando o mouse passa por cima*/
+   filter: blur(2px) grayscale(100%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+   transform: scale(1.05); /*altera o tamanho da imagem quando o mouse passa por cima*/
+   
+}
+
+footer {
+    width: 100%;
+    height:60px; /*altera a altura do rodapé*/
+    background-color: var(--cor-secundaria); /*altera a cor de fundo do rodapé*/
+    display: flex; /*altera o display do rodapé para flexbox*/
+    justify-content: center; /*alinha os itens no centro do rodapé*/
+    flex-direction: column; /*alinha os itens em coluna*/
+    border-top: 2px solid var(--cor-borda); /*altera a borda superior do rodapé*/
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25); /*altera a sombra do rodapé*/
+    font-family: 'Inter'; /*altera a fonte do texto*/
+    font-style: normal; /*altera o estilo da fonte*/
+    font-weight: 200; /*altera o peso da fonte*/
+    font-size: 16px; /*altera o tamanho da fonte*/
+    text-align: center; /*altera o alinhamento do texto para centralizado*/
+    color: var(--cor-primaria); /*altera a cor do texto*/
+
+}
