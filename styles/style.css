@@ -39,8 +39,9 @@ nav.menu {
 
 a.home {
     background-image: url(../assets/Home.png);
-    width: 34px;
-    height: 32px;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
     display: inline-block;
     background-position: center;
     transition: 0.3s;
@@ -49,21 +50,22 @@ a.home {
 
 a.home:hover { /*altera o ícone home quando o mouse passa por cima*/
     background-image: url(../assets/Home1.png);
+    background-repeat: no-repeat;
     transform: translateX(20px) scale(1.05);
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     display: inline-block;
     background-position: center;
     background-color: var(--cor-fundo);
     border-radius: 50%;
-    box-shadow: 0 0 0 16px var(--cor-fundo); /* círculo maior ao redor do ícone */
+    box-shadow: 0 0 0 10px var(--cor-fundo); /* círculo maior ao redor do ícone */
 
 }
 
 a.home::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
     content: "home";
     position: absolute;
-    right: 40px; /* distância do ícone, ajuste conforme necessário */
+    right: 47px; /* distância do ícone, ajuste conforme necessário */
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
     font-family: 'Inter', sans-serif;
@@ -81,8 +83,9 @@ a.home:hover::after {  /* exibe o texto ao passar o mouse */
 
 a.templates {
     background-image: url(../assets/Templates.png);
-    width: 30px;
-    height: 28px;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
     display: inline-block;
     background-position: center;
     transition: 0.3s;
@@ -92,21 +95,22 @@ a.templates {
 
 a.templates:hover { /*altera o ícone templates quando o mouse passa por cima*/
     background-image: url(../assets/Templates1.png);
+    background-repeat: no-repeat;
     transform: translateX(20px) scale(1.05);
-    width: 30.1px;
-    height: 30.1px;
+    width: 45px;
+    height: 45px;
     display: inline-block;
-    background-position: bottom;
+    background-position: center;
     background-color: var(--cor-fundo);
     border-radius: 50%;
-    box-shadow: 0 0 0 17px var(--cor-fundo); /* círculo maior ao redor do ícone */
+    box-shadow: 0 0 0 10px var(--cor-fundo); /* círculo maior ao redor do ícone */
 
 }
 
 a.templates::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
     content: "templates";
     position: absolute;
-    right: 25px; /* distância do ícone, ajuste conforme necessário */
+    right: 33px; /* distância do ícone, ajuste conforme necessário */
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
     font-family: 'Inter', sans-serif;
@@ -124,8 +128,9 @@ a.templates:hover::after {  /* exibe o texto ao passar o mouse */
 
 a.pixel_art {
     background-image: url(../assets/PixelArt.png);
-    width: 30px;
-    height: 28px;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
     display: inline-block;
     background-position: center;
     transition: 0.3s;
@@ -135,21 +140,22 @@ a.pixel_art {
 
 a.pixel_art:hover { /*altera o ícone templates quando o mouse passa por cima*/
     background-image: url(../assets/PixelArt1.png);
+    background-repeat: no-repeat;
     transform: translateX(20px) scale(1.05);
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     display: inline-block;
-    background-position: bottom;
+    background-position: center;
     background-color: var(--cor-fundo);
     border-radius: 50%;
-    box-shadow: 0 0 0 16px var(--cor-fundo); /* círculo maior ao redor do ícone */
+    box-shadow: 0 0 0 10px var(--cor-fundo); /* círculo maior ao redor do ícone */
 
 }
 
 a.pixel_art::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
     content: "pixelart";
     position: absolute;
-    right: 30px; /* distância do ícone, ajuste conforme necessário */
+    right: 39px; /* distância do ícone, ajuste conforme necessário */
     top: 50%;
     transform: translateY(-50%) rotate(90deg);
     font-family: 'Inter', sans-serif;
@@ -165,6 +171,52 @@ a.pixel_art:hover::after {  /* exibe o texto ao passar o mouse */
     opacity: 1;
 }
 
+a.curriculum {
+    background-image: url(../assets/Curriculum.png);
+    background-repeat: no-repeat;
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+    background-position: center;
+    transition: 0.3s;
+    position: relative;
+
+}
+
+a.curriculum:hover { /*altera o ícone templates quando o mouse passa por cima*/
+    background-image: url(../assets/Curriculum1.png);
+    background-repeat: no-repeat;
+    transform: translateX(20px) scale(1.05);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-position: center;
+    background-color: var(--cor-fundo);
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px var(--cor-fundo); /* círculo maior ao redor do ícone */
+
+}
+
+a.curriculum::after { /* pseudo-elemento para adicionar texto ao lado do ícone */
+    content: "curriculum";
+    position: absolute;
+    right: 32px; /* distância do ícone, ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+a.curriculum:hover::after {  /* exibe o texto ao passar o mouse */
+    opacity: 1;
+    
+}
+
 body /*estilizar a tag body do index.html*/ {
     height: 100vh; /*altura do body, o VH (viewport) é utilizado para telas responsivas*/
     box-sizing: border-box; /*inclui o padding e a borda no cálculo da largura e altura do elemento*/
@@ -177,7 +229,7 @@ main.container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 40px 0px 30px 130px; /*altera o espaçamento interno do elemento*/
+    padding: 40px 0px 30px 150px; /*altera o espaçamento interno do elemento*/
     background-color: var(--cor-secundaria); /*altera a cor de fundo do elemento*/
     border: 2px solid var(--cor-borda);
     background-image: url(../assets/WatermarkHome.png);
@@ -197,8 +249,8 @@ section.apresentacao {
 h1.apresentacao_titulo {
     font-family: 'Playfair Display'; /*altera a fonte do texto*/
     font-style: normal; /*altera o estilo da fonte*/
-    font-weight: 400; /*altera o peso da fonte*/
-    font-size: 64px; /*altera o tamanho da fonte*/
+    font-weight: 43; /*altera o peso da fonte*/
+    font-size: 50px; /*altera o tamanho da fonte*/
     text-transform: uppercase; /*altera o tamanho da fonte e transforma o texto em maiúsculo*/
     line-height: 85px; /*altera o tamanho da linha*/
     color: var(--cor-texto); /*altera a cor do texto*/
@@ -209,11 +261,13 @@ h2.apresentacao_subtitulo {
     font-family: 'Playfair Display'; /*altera a fonte do texto*/
     font-style: normal; /*altera o estilo da fonte*/
     font-weight: 400; /*altera o peso da fonte*/
-    font-size: 64px; /*altera o tamanho da fonte*/
+    font-size: 50px; /*altera o tamanho da fonte*/
     text-transform: uppercase; /*altera o tamanho da fonte e transforma o texto em maiúsculo*/
     line-height: 85px; /*altera o tamanho da linha*/
     letter-spacing: 0.16em; /*altera o espaçamento entre as letras*/
     color: var(--cor-texto); /*altera a cor do texto*/
+    margin-top: -30px;
+    margin-bottom: -30px;
 
 }
 
@@ -234,7 +288,8 @@ p.frase {
     line-height: 30px; /*altera o tamanho da linha*/
     text-align: center; /*altera o alinhamento do texto para centralizado*/
     color: grey; /*altera a cor do texto*/
-    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
 
 }
 
@@ -242,11 +297,11 @@ p.apresentacao_texto {
     font-family: 'Quicksand';
     font-style: normal; /*altera o estilo da fonte*/
     font-weight: 500; /*altera o peso da fonte*/
-    font-size: 15px; /*altera o tamanho da fonte*/
-    line-height: 27px; /*altera o tamanho da linha*/
+    font-size: 14px; /*altera o tamanho da fonte*/
+    line-height: 24px; /*altera o tamanho da linha*/
     text-align: justify; /*altera o alinhamento do texto*/
     color: var(--cor-texto); /*altera a cor do texto*/
-    margin-bottom: 10px;
+    margin-bottom: 10px; /*altera a margem inferior do texto*/
 
 }
 
@@ -333,8 +388,8 @@ a.email:hover { /*altera o ícone email quando o mouse passa por cima*/
 }
 
 img.imagem_perfil {
-    width: 310px;
-    height: 310px;
+    width: 290px;
+    height: 290px;
     object-fit: cover; /* faz a imagem preencher todo o espaço disponível */
     border-radius: 50%; /*deixa a imagem com bordas arredondadas*/
     border: 8px solid var(--cor-primaria);
