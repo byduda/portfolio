@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalOverlay = document.getElementById('modal-overlay');
     const modalTitle = document.getElementById('modal-title');
     const modalImg = document.getElementById('modal-img');
-    const modalDescription = document.getElementById('modal-description');
+    const modalDescription = document.getElementById('modal_description');
     const closeModalBtn = document.getElementById('modal-close-btn');
     
     // NOVO: Seleciona todos os botões e links de ação dentro dos templates
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Pega as informações dos data-attributes do item clicado
         const title = item.getAttribute('modal-title');
         const imgSrc = item.getAttribute('modal-img-src');
-        const description = item.getAttribute('modal-description');
+        const description = item.getAttribute('modal_description');
 
         // preenche o modal com as informações
         modalTitle.textContent = title;

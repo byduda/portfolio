@@ -70,7 +70,22 @@
                              #ffffff 25%,
                              #00000011 43%,
                              #00000015 48%,
-                             #00000007);                            
+                             #00000007);
+                             
+  --botao-fechar-sombra: linear-gradient(#ffffff80, 
+                                         #ffffff4d 45%, 
+                                         #0000001a 50%, 
+                                         #0000001a 75%, 
+                                         #ffffff80);
+  
+  --botao-fechar: radial-gradient(circle at -60% 50%, #0007 5% 10%, 
+                                                      #0000 50%), radial-gradient(circle at 160% 50%, 
+                                                      #0007 5% 10%,
+                                                      #0000 50%), linear-gradient(
+                                                      #e0a197e5, 
+                                                      #cf796a 25% 50%,
+                                                      #d54f36 50%);
+                        
   --preto: #000;
   --branco: #fff;
 }
@@ -122,9 +137,9 @@ body:after{
   left: 50%;
   transform: translate(-50%,-50%); 
   position: fixed;
-  width: 80%; /* Base para mobile */
+  width: 80%;
   max-width: 600px;
-  height: 90%; /* Base para mobile */
+  height: 90%; 
 }
 
 /*sombra do fundo do container*/
@@ -136,7 +151,7 @@ div.window{
   z-index:0;
   border-radius: 6px;
   backdrop-filter:blur(4px);
-  height: 90%; /* Base para mobile */
+  height: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -149,8 +164,6 @@ div.window_body{
   margin: 6px;
   margin-top: 0;
   overflow:auto;
-  height: 80vh; /* Base para mobile */
-  max-height: 570px;
   flex-grow: 1;
 }
 
@@ -198,7 +211,7 @@ h1.titulo {
 
 /*texto subtítulo*/
 h2.subtitulo {
-  margin:0 0 0px 0;
+  margin:0 0 0px -1px;
   padding:0;
   font-family: 'Pixel Operator';
   font-style: normal;
@@ -707,7 +720,11 @@ span.sr-only {
 @media (min-width: 1920px) {
   #container {
     width: 30%;
-    height: auto;
+    height: 80%;
+  }
+
+  div.window {
+    height: 84%;
   }
 
   #posts_divider {
@@ -716,7 +733,7 @@ span.sr-only {
 
   div.title_bar_text{
     font-family: 'MS PGothic';
-  font-size:11px;
+    font-size:11px;
   }
   
   nav.main_menu > ul > li > a {
