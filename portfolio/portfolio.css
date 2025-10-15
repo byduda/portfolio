@@ -181,6 +181,11 @@ button.modal-close-btn {
 
 /* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
+
+        div.window_modal_content{
+        height: 75%;
+        width: 55%;
+    }
 }
 
 /* para monitores médios (1440px ou mais) */

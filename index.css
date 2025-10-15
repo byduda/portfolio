@@ -125,24 +125,10 @@ div.wing2 {
 /* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
 
-    main.apresentacao {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-    section.apresentacao_img {
-        order: initial;
-    }
-
-    div.redes_sociais {
-        gap: 35px; /* Aumenta o gap para notebooks */
-    }
-
     div.wing1, div.wing2 {
         width: 34px;
         height: 29px;
-
+    }
 }
 
 /* para monitores médios (1440px ou mais) */

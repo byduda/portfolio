@@ -584,7 +584,7 @@ span.sr-only {
   }
   div.title_bar_text{
     font-family: 'MS PGothic';
-  font-size:11px;
+    font-size:11px;
   }
   
   nav.main_menu > ul > li > a {
@@ -604,12 +604,12 @@ span.sr-only {
 
   h1.titulo {
     font-family: 'MS PGothic';
-    font-size: 1.40rem;
+    font-size: 1.35rem;
   }
 
   h2.subtitulo {
     font-family: 'MS PGothic';
-    font-size: 1.40rem;
+    font-size: 1.36rem;
   }
 
   p.paragrafo {
@@ -636,30 +636,21 @@ span.sr-only {
   #posts_divider {
     background-size: 150%;
   }
-  
-  p.alert_titulo {
-    font-family: 'MS PGothic';
-    font-size: 0.75rem;
-  }
 
   h1.titulo {
-    font-family: 'MS PGothic';
     font-size: 0.93rem;
   }
 
   h2.subtitulo {
-    font-family: 'MS PGothic';
     font-size: 0.93rem;
   }
 
   p.paragrafo {
     font-size: 0.800rem;
-    font-family: 'MS PGothic';
   }
 
   p.quote{
     font-size: 0.75rem;
-    font-family: 'MS PGothic';
   }
 }
 
@@ -667,33 +658,12 @@ span.sr-only {
 @media (min-width: 1440px) {
   #container {
     width: 37%;
-    height: 90%;
   }
 
   #posts_divider {
     background-size: 130%;
   }
-
-  div.title_bar_text{
-    font-family: 'MS PGothic';
-  font-size:11px;
-  }
   
-  nav.main_menu > ul > li > a {
-    font-size: 0.75rem;
-    font-family: 'MS PGothic', sans-serif;
-  }
-  
-  ul.submenu li a {
-    font-family: 'MS PGothic', sans-serif;
-    font-size: 0.75rem;
-  }
-  
-  p.alert_titulo {
-    font-family: 'MS PGothic';
-    font-size: 0.75rem;
-  }
-
   h1.titulo {
     font-size: 1.40rem;
     font-family: 'MS PGothic';
@@ -703,16 +673,14 @@ span.sr-only {
   h2.subtitulo {
     font-size: 1.40rem;
     letter-spacing:2px;
-    font-family: 'MS PGothic';
   }
+
   p.paragrafo {
     font-size: 0.900rem;
-    font-family: 'MS PGothic';
   }
 
   p.quote{
     font-size: 0.80rem;
-    font-family: 'MS PGothic';
   }  
 }
 
@@ -727,49 +695,13 @@ span.sr-only {
     height: 84%;
   }
 
-  #posts_divider {
-    background-size: 130%;
-  }
-
-  div.title_bar_text{
-    font-family: 'MS PGothic';
-    font-size:11px;
-  }
-  
-  nav.main_menu > ul > li > a {
-    font-size: 0.75rem;
-    font-family: 'MS PGothic', sans-serif;
-  }
-  
-  ul.submenu li a {
-    font-family: 'MS PGothic', sans-serif;
-    font-size: 0.75rem;
-  }
-  
-  p.alert_titulo {
-    font-family: 'MS PGothic';
-    font-size: 0.75rem;
-  
-  }
-
   h1.titulo {
     font-size: 1.40rem;
-    font-family: 'MS PGothic';
   }
 
   h2.subtitulo {
     font-size: 1.40rem;
     letter-spacing:2px;
-    font-family: 'MS PGothic';
-  }
-  p.paragrafo {
-    font-size: 0.900rem;
-    font-family: 'MS PGothic';
-  }
-
-  p.quote{
-    font-size: 0.80rem;
-    font-family: 'MS PGothic';
   }
 
 }
