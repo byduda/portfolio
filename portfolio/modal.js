@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalTitle.textContent = title;
         modalImg.src = imgSrc;
         modalImg.alt = `Imagem do projeto ${title}`;
-        modalDescription.textContent = description;
+        modalDescription.innerHTML = description;
 
         // mostra o modal
         modalOverlay.style.display = 'flex';
