@@ -223,8 +223,8 @@ h2.subtitulo {
   text-transform: uppercase;
 }
 
-h3 {
-    font-family: 'Pixel Operator', sans-serif;
+h3.subtitulo2{
+    font-family: 'Pixel Operator';
     font-style: normal;
     font-weight: 300;
     color: #4f4f4f;

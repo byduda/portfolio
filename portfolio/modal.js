@@ -4,28 +4,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // seleciona os elementos que vão abrir o modal
     const gridItems = document.querySelectorAll('.template');
     
-    // seleciona os elementos do modal
+// seleciona os elementos do modal
     const modalOverlay = document.getElementById('modal-overlay');
     const modalTitle = document.getElementById('modal-title');
     const modalImg = document.getElementById('modal-img');
-    const modalDescription = document.getElementById('modal_description');
+    const modalDescription = document.getElementById('modal-description');
+    const modalDesign = document.getElementById('modal-design'); // O elemento já está selecionado!
     const closeModalBtn = document.getElementById('modal-close-btn');
     
     // NOVO: Seleciona todos os botões e links de ação dentro dos templates
     const actionButtons = document.querySelectorAll('.template .botoes, .template a.botoes');
 
-    // função para abrir o modal
+// função para abrir o modal
     function openModal(item) {
         // Pega as informações dos data-attributes do item clicado
         const title = item.getAttribute('modal-title');
         const imgSrc = item.getAttribute('modal-img-src');
-        const description = item.getAttribute('modal_description');
+        const description = item.getAttribute('modal-description');
+        const design = item.getAttribute('modal-design'); // <-- 1. PEGAR A INFORMAÇÃO
 
         // preenche o modal com as informações
         modalTitle.textContent = title;
         modalImg.src = imgSrc;
         modalImg.alt = `Imagem do projeto ${title}`;
         modalDescription.innerHTML = description;
+        modalDesign.innerHTML = design; // <-- 2. INSERIR A INFORMAÇÃO NO ELEMENTO
 
         // mostra o modal
         modalOverlay.style.display = 'flex';
