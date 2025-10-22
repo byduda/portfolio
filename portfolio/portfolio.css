@@ -28,7 +28,16 @@ div.template-title-bar {
     padding: 3px 8px;
     border: 1px solid #292929;
     border-bottom: 1px dotted #000000;
-    border-radius: 6px 6px 0 0; 
+    border-radius: 6px 6px 0 0;
+    font-family: 'Pixel Operator';
+    font-style: normal;
+    font-weight: 300;
+    color: #4f4f4f;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 div.template figure {
