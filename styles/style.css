@@ -169,13 +169,13 @@ div.window_body{
 
 /*dentro do container com divisória*/
 #posts_divider{
-  padding: 15% 0% 0% 0%; /* Base para mobile */
+  padding: 15% 0% 0% 0%;
   margin: -15px 10px 10px 10px;
   background-color:var(--branco);
   border:1px solid #848484;
   background-image: url('../assets/imgs/divider.png');
   background-repeat: no-repeat;
-  background-size: 200%; /* Base para mobile */
+  background-size: 200%;
   background-position: top;
   display: block;
   justify-content: center;
@@ -199,7 +199,7 @@ h1.titulo {
   font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 1.93rem; /* Base para mobile */
+  font-size: 1.93rem;
   letter-spacing:-1px;
   color:#000;
   text-align: center;
@@ -216,7 +216,7 @@ h2.subtitulo {
   font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 1.89rem; /* Base para mobile */
+  font-size: 1.89rem;
   letter-spacing:1px;
   color: #000;
   text-align: center;
@@ -241,7 +241,7 @@ p.quote{
   font-family: 'Pixel Operator';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.875rem; /* Base para mobile */
+  font-size: 0.875rem;
   text-align: center;
   color:#000;
 }
@@ -384,13 +384,13 @@ div.alert_img {
   background-image: url(../assets/imgs/hearts.gif);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%; /* Base para mobile */
+  background-size: 100%;
   padding: 50px 0px 0px 0px;
   display: block;
-  margin: 0% 10% 0% 10%; /* Base para mobile */
+  margin: 0% 10% 0% 10%;
   transition-duration: 0.20s;
   image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
 }
 
@@ -538,8 +538,8 @@ a.botoes:active:after {
 footer .cat {
   background-image: url(../assets/icons/cat.gif);
   background-size: cover;
-  width: 80px; /* Base para mobile */
-  height: 80px; /* Base para mobile */
+  width: 80px;
+  height: 80px;
   position: fixed;
   left: 50%;
   bottom: 0;
@@ -547,8 +547,9 @@ footer .cat {
   transition: bottom 0.3s ease-in-out;
   z-index: 10;
   image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  cursor: grab;
 }
 
 /*gatinho do rodapé ao passar o mouse*/
