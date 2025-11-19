@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const clicksound = new Audio('./assets/sounds/clicksound.wav');
+    const clicksound = new Audio('../assets/sounds/clicksound.wav');
     
     function tocarSom() {
         clicksound.currentTime = 0;
