@@ -24,7 +24,7 @@ section.apresentacao_img {
 
 /*icone duda*/
 figure.duda_img {
-    background-image: url(/assets/imgs/duda_img.png);
+    background-image: url('../imgs/duda_img.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 180px;
@@ -68,12 +68,11 @@ a.redes_sociais_icons:hover {
 }
 
 /* Classes específicas apenas para a imagem */
-a.email { background-image: url(/assets/icons/email.svg); }
-a.figma { background-image: url(/assets/icons/figma.svg); }
-a.github { background-image: url(/assets/icons/github.svg); }
-a.linkedin { background-image: url(/assets/icons/linkedin.svg); }
-a.whatsapp { background-image: url(/assets/icons/whatsapp.svg); }
-
+a.email { background-image: url('../icons/email.svg'); }
+a.figma { background-image: url('../icons/figma.svg'); }
+a.github { background-image: url('../icons/github.svg'); }
+a.linkedin { background-image: url('../icons/linkedin.svg'); }
+a.whatsapp { background-image: url('../icons/whatsapp.svg'); }
 
 div.wing1, div.wing2 {
     width: 26px;
@@ -87,11 +86,11 @@ div.wing1, div.wing2 {
 }
 
 div.wing1 {
-    background-image: url(/assets/icons/wing1.gif);
+    background-image: url('../icons/wing1.gif');
 }
 
 div.wing2 {
-    background-image: url(/assets/icons/wing2.gif);
+    background-image: url('../icons/wing2.gif');
 }
 
 /*media queries para responsividade de telas*/

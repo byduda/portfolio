@@ -125,7 +125,7 @@ a.download_icon {
     background-repeat: no-repeat;
     background-size: contain;
     transition: filter 0.20s, transform 0.20s;
-    background-image: url(/assets/icons/download.svg);
+    background-image: url('../icons/download.svg');
     margin: 10px 0px 0px 10px;
     display: flex;
 }
