@@ -1,0 +1,140 @@
+/*home*/
+main.apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    gap: 10px;
+}
+
+/*coluna do texto da apresentacao*/
+section.apresentacao_texto {
+    justify-content: space-between;
+    width: 100%;
+    text-align: justify;
+}
+
+/*coluna da img da apresentacao*/
+section.apresentacao_img {
+    justify-content: space-between;
+    order: -1;
+    margin-bottom: 0;
+}
+
+/*icone duda*/
+figure.duda_img {
+    background-image: url(/assets/imgs/duda_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #848484;
+    border-radius: 3%;
+    display: block;
+    margin: 10px 0px 5px 0px;
+    filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition-duration: 0.30s;
+    flex-shrink: 0;
+}
+
+.duda_img:hover {
+    filter: none;
+}
+
+div.redes_sociais {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Gap inicial para mobile */
+    transition-duration: 0.20s;
+}
+
+/* CSS Otimizado para os ícones */
+a.redes_sociais_icons {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: filter 0.20s, transform 0.20s;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: crisp-edges;
+}
+
+a.redes_sociais_icons:hover {
+    filter: invert(70%);
+    transform: scale(1.05);
+}
+
+/* Classes específicas apenas para a imagem */
+a.email { background-image: url(/assets/icons/email.svg); }
+a.figma { background-image: url(/assets/icons/figma.svg); }
+a.github { background-image: url(/assets/icons/github.svg); }
+a.linkedin { background-image: url(/assets/icons/linkedin.svg); }
+a.whatsapp { background-image: url(/assets/icons/whatsapp.svg); }
+
+
+div.wing1, div.wing2 {
+    width: 26px;
+    height: 21px;
+    background-size: contain;
+    display: none;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+div.wing1 {
+    background-image: url(/assets/icons/wing1.gif);
+}
+
+div.wing2 {
+    background-image: url(/assets/icons/wing2.gif);
+}
+
+/*media queries para responsividade de telas*/
+
+/* para tablets (768px ou mais) */
+@media (min-width: 768px) {
+
+    nav.main_menu > ul {
+        justify-content: start;
+    }
+    
+    main.apresentacao {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section.apresentacao_img {
+        order: initial;
+    }
+
+    div.redes_sociais {
+        gap: 35px;
+    }
+
+    div.wing1, div.wing2 {
+        display: flex;
+
+}
+
+/* para notebook (1240px ou mais) */
+@media (min-width: 1240px) {
+
+    div.wing1, div.wing2 {
+        width: 34px;
+        height: 29px;
+    }
+}
+
+/* para monitores médios (1440px ou mais) */
+@media (min-width: 1440px) {
+
+    div.wing1, div.wing2 {
+        width: 26px;
+        height: 21px;
+    } }

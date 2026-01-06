@@ -1,0 +1,223 @@
+ /*templates/pixelart*/
+
+ main.colunas {
+    display: flex;
+    margin: 20px 0px 0px 0px;
+    gap: 10px;
+    justify-content: center;
+    padding: 0px 10px 10px 10px;
+    flex-wrap: wrap;
+}
+
+div.template, div.pixelart {
+    display: block;
+    padding: 0px 0px 10px 0px;
+    width: calc(50% - 5px); 
+    text-shadow: none;
+    border-radius: 0 0 6px 6px; 
+    border: none; 
+    transition: none;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+div.template-title-bar {
+    background: var(--barrademenu);
+    display: flex;
+    justify-content: center;
+    padding: 3px 8px;
+    border: 1px solid #292929;
+    border-bottom: 1px dotted #000000;
+    border-radius: 6px 6px 0 0;
+    font-family: 'Pixel Operator';
+    font-style: normal;
+    font-weight: 300;
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+
+div.template figure, div.pixelart figure {
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid #292929;
+    border-right: 1px solid #292929;
+    border-bottom: 1px dotted #292929;
+    transition: border 0.3s ease 0.1s;
+    border-radius: 0px 0px 6px 6px;
+}
+
+div.pixelart figure {
+    border-radius: 6px;
+    border-top: 1px dotted #292929;
+}
+
+  
+div.template:hover figure, div.pixelart:hover figure {
+    transition-delay: 0;
+}
+  
+div.template figure:before, div.pixelart figure:before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff83;
+    transition: 0.3s ease 0.1s;
+}
+  
+div.template figure:after, 
+div.pixelart figure:after {
+    content: '';
+    background: url(/assets/icons/zoom-in.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+
+div.template figure:hover:before,
+div.template figure:hover:after,
+div.pixelart figure:hover:before{
+  opacity: 1;
+  transition-delay:0;
+}
+  
+  div.template figure img, 
+  div.pixelart figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+div.template_botoes {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 0px 0px 0px; 
+    gap: 5px;
+    border-radius: 0 0 6px 6px; 
+}
+
+.botoes {
+    font-size: 0.850rem;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.40s;
+    display: block; 
+    text-decoration: none; 
+    padding: 5px 10px; 
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #70707099;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+
+}
+
+div.window_modal_content{
+border:1px solid var(--preto);
+box-shadow:2px 2px 10px 1px #4f4f4f,
+            inset 0 0 0 1px #fffa;
+position:relative;
+z-index:0;
+border-radius: 6px;
+backdrop-filter:blur(4px);
+height: 50%;
+display: flex;
+flex-direction: column;
+width: 90%;
+}
+
+.modal-body {
+    padding: 15px;
+}
+
+.modal-body img {
+    width: 100%;
+    border: 1px solid #848484;
+}
+
+/* Botão de fechar */
+button.modal-close-btn {
+    border: 1px solid #848484;
+    cursor: pointer;
+    position: absolute;
+    top: -0.5px;
+    right: -0.5px;
+    min-height: 27px;
+    min-width: 55px;
+    box-shadow: 1px 1px 0px #fff;
+    background: url(/assets/icons/close_button.png) no-repeat 50%, var(--botao-fechar-sombra), var(--botao-fechar);
+    box-shadow: #fffa inset 0 0 0 1px;
+    border-radius: 0px 5px 0px 5px;
+    filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(114, 114, 114, 0.25));
+    transition-duration: 0.40s;
+}
+
+.modal-close-btn:hover {
+    background: url(/assets/icons/close_button.png) no-repeat 50%, var(--botao-fechar-sombra), var(--botao-fechar);
+    box-shadow: 0 0 7px 3px #e68e75, #fffa inset 0 0 0 1px;
+    filter: none;
+    transition-duration: 0.60s;
+    border-radius: 0px 5px 0px 5px;
+
+}
+
+/*media queries para responsividade de telas*/
+
+/* para tablets (768px ou mais) */
+@media (min-width: 768px) {
+    div.template_botoes {
+        flex-direction: row; /* Altera o fluxo para vertical */
+    }
+}
+
+/* para notebook (1240px ou mais) */
+@media (min-width: 1240px) {
+
+        div.window_modal_content{
+        height: 75%;
+        width: 55%;
+    }
+}
+
+/* para monitores médios (1440px ou mais) */
+@media (min-width: 1440px) {
+
+}
+
+/* para monitores grandes (1920px ou mais) */
+@media (min-width: 1920px) {
+
+    div.window_modal_content{
+        height: 90%;
+        width: 50%;
+    }
+
+
+}

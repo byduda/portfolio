@@ -1,0 +1,719 @@
+/*estilização da página*/
+
+/*reset de CSS, deixa toda a pré-padronização da página resetada para ser redefinida*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes stars {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.5);
+  }
+}
+
+@font-face{
+  font-family: 'MSP Gothic';
+  src: url(/assets/fonts/ms-pgothic-regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Pixel Operator';
+  src: url(/assets/fonts/pixel_operator.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*variáveis*/
+:root{
+  --efeitovidro: linear-gradient(135deg,#fff5 70px,transparent 100px),
+                 linear-gradient(225deg,#fff5 70px,transparent 100px),
+                 linear-gradient(54deg, #0002 0 4%,
+                                        #0002 15% 16%,
+                                        #0002 23% 24%,
+                                        #bbb2 25% 26%,
+                                        #0002 31% 33%,
+                                        #0002 34% 34.5%,
+                                        #bbb2 36% 40%,
+                                        #0002 41% 41.5%,
+                                        #bbb2 44% 45%,
+                                        #bbb2 46% 47%,
+                                        #0002 48% 49%,
+                                        #0002 50% 50.5%,
+                                        #0002 56% 56.5%,
+                                        #bbb2 57% 63%,
+                                        #0002 67% 69%,
+                                        #aaa2 85% 86%,
+                                        #0002 87%) left center/100vw 100vh no-repeat fixed;
+  --efeitoanalogico: linear-gradient(90deg, #ff00000f,
+                                            #00ff0005,
+                                            #0000ff0f);
+  --barrademenu: linear-gradient(#ffffff80 
+                             20%,#ffffff80 
+                             25%,#0000000d 
+                             43%,#0000001a 
+                             48%,#0000000d);
+  --submenu: linear-gradient(hsla(0,0%,100%,.5) 20%,
+                             hsla(0,0%,100%,.5) 25%,
+                             rgba(0,0,0,.0509804) 43%,
+                             rgba(0,0,0,.1) 48%,
+                             rgba(0,0,0,.0509804));
+
+  --botao: linear-gradient(#ffffff 20%,
+                             #ffffff 25%,
+                             #00000011 43%,
+                             #00000015 48%,
+                             #00000007);
+                             
+  --botao-fechar-sombra: linear-gradient(#ffffff80, 
+                                         #ffffff4d 45%, 
+                                         #0000001a 50%, 
+                                         #0000001a 75%, 
+                                         #ffffff80);
+  
+  --botao-fechar: radial-gradient(circle at -60% 50%, #0007 5% 10%, 
+                                                      #0000 50%), radial-gradient(circle at 160% 50%, 
+                                                      #0007 5% 10%,
+                                                      #0000 50%), linear-gradient(
+                                                      #e0a197e5, 
+                                                      #cf796a 25% 50%,
+                                                      #d54f36 50%);
+                        
+  --preto: #000;
+  --branco: #fff;
+}
+
+/*estrelinhas do cursor*/
+.star{
+  position: fixed;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  z-index: 9999;
+  animation: stars 1s forwards;
+  user-select: none;
+  filter: drop-shadow(0 0 3px white);
+}
+
+/*seleção de texto*/ 
+::selection{
+  background: var(--preto);
+  color: var(--branco);
+ }
+
+ /*imagem de fundo*/
+body{
+  margin:0;
+  background-image: url(/assets/imgs/background.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  font-style: normal;
+  font-weight: 300;
+  color: #000;
+ }
+
+/*efeito pixel tv analógica*/
+body:after{
+  content: "";
+  display: block;
+  position: fixed;
+  background: var(--efeitoanalogico);
+  z-index: 2;
+  background-size: 3px 100%;
+  pointer-events: none;
+  inset: 0;
+}
+
+/*container da janela*/
+#container{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  position: fixed;
+  width: 80%;
+  max-width: 600px;
+  height: 90%; 
+}
+
+/*sombra do fundo do container*/
+div.window{ 
+  border:1px solid var(--preto);
+  box-shadow:2px 2px 10px 1px #4f4f4f,
+              inset 0 0 0 1px #fffa;
+  position:relative;
+  z-index:0;
+  border-radius: 6px;
+  backdrop-filter:blur(4px);
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*lateral de dentro do container*/
+div.window_body{
+  background: #f0f0f0;
+  border: 1px solid var(--preto);
+  box-shadow: 0 0 0 1px #fffa;
+  margin: 6px;
+  margin-top: 0;
+  overflow:auto;
+  flex-grow: 1;
+}
+
+/*dentro do container com divisória*/
+#posts_divider{
+  padding: 15% 0% 0% 0%;
+  margin: -15px 10px 10px 10px;
+  background-color:var(--branco);
+  border:1px solid #848484;
+  background-image: url('/assets/imgs/divider.png') ;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: top;
+  display: block;
+  justify-content: center;
+}
+
+/*dentro do container sem divisória*/
+#posts{
+  padding:10px;
+  margin: 10px;
+  background-color:var(--branco);
+  border:1px solid #848484;
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+}
+
+/*texto título*/
+h1.titulo {
+  margin:0px 0px 0px 0px;
+  padding:0;
+  font-family: 'Pixel Operator';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.93rem;
+  letter-spacing:-1px;
+  color:#000;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/*texto subtítulo*/
+h2.subtitulo {
+  margin:0 0 0px -1px;
+  padding:0;
+  font-family: 'Pixel Operator';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.89rem;
+  letter-spacing:1px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitulo_faculdade {
+    margin-top: 5px;
+}
+
+h3.subtitulo2{
+    font-family: 'Pixel Operator';
+    font-style: normal;
+    font-weight: 300;
+    color: #4f4f4f;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+/*texto quote*/
+p.quote{
+  margin:10px 0 15px 0;
+  padding: 0px;
+  font-family: 'Pixel Operator';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.875rem;
+  text-align: center;
+  color:#000;
+}
+
+/*texto parágrafo*/
+p.paragrafo{
+   margin:0 0 10px 0;
+   padding:0;
+   font-family: 'Pixel Operator';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 0.900rem;
+   letter-spacing:1.5px;
+   text-align: justify;
+   color:#000;
+}
+
+/*título da página do lado do icon*/
+div.title_bar{
+  border-radius: 6px;
+  display:flex;
+  padding: 5px;
+  padding-left: 5px;
+  background:var(--efeitovidro);
+}
+
+/*texto do título da página do lado do icon*/
+div.title_bar_text{
+  font-family: 'Pixel Operator';
+  font-style: normal;
+  font-weight: 300;
+  color:#4f4f4f;
+  letter-spacing:3px;
+  font-size:0.99rem;
+  margin: 3px 0px 3px 0px;
+}
+
+ /*barra de menu*/
+ nav.main_menu > ul {
+  background: var(--barrademenu);
+  padding: 3px 0px;
+  margin: -2px 0px -2px 0px;
+  width: 100%;
+  display: flex;
+  gap: 1%;
+  justify-content: space-around;
+}
+
+nav.main_menu > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+/*texto do menu*/
+nav.main_menu > ul > li > a {
+  display: block;
+  padding: 6px 10px;
+  font-size: 0.88rem;
+  font-family: 'Pixel Operator', sans-serif;
+  color: var(--preto);
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+   
+/*menu ao passar o mouse*/
+nav.main_menu > ul > li > a:hover,
+nav.main_menu > ul > li > a:focus {
+  background: var(--preto);
+  color: var(--branco);
+  outline: none;
+  display: block;
+}
+  
+/*submenu*/
+ul.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+  border: 1px solid #a1a1a1;
+  box-shadow: 4px 4px 3px -2px rgba(0,0,0,0.3);
+  background: var(--branco);
+  min-width: 150px;
+  padding: 2px; 
+}
+
+
+li.has_submenu:hover > .submenu,
+li.has_submenu:focus-within > .submenu {
+  display: block;
+}
+   
+/*barrinha lateral do submenu*/
+ul.submenu::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 25px;
+  width: 2px;
+  height: calc(100% - 4px);
+  background: linear-gradient(to right, #dbdbdb, 
+                                        #dbdbdb 1px, 
+                                        var(--branco) 1px, 
+                                        var(--branco));
+  pointer-events: none;
+}
+   
+ul.submenu li {
+  display: block;
+}
+
+/*links do submenu*/
+ul.submenu li a {
+  display: block; 
+  color: var(--preto); 
+  text-decoration: none; 
+  padding: 6px 10px 6px 35px;
+  font-family: 'Pixel Operator', sans-serif;
+  font-size: 0.88rem;
+  text-transform: lowercase;
+}
+   
+ /*submenu ao passar o mouse*/
+ul.submenu li a:hover,
+ul.submenu li a:focus {
+  background: var(--submenu);
+  border: 1px solid;
+  border-color: #a1a1a1;
+  border-radius: 3px;
+  margin: -1px;
+  padding:6.7px 10px 6px 35px;
+  position: relative; 
+  z-index: 1; 
+}
+
+/*gif de corações pixelart*/
+div.alert_img {
+  background-image: url('/assets/imgs/hearts.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 50px 0px 0px 0px;
+  display: block;
+  margin: 0% 10% 0% 10%;
+  transition-duration: 0.20s;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/*gif de corações pixelart ao passar o mouse*/
+div.alert_img:hover{
+  filter: invert(50%);
+  transform: scale(0.95);
+}
+
+/*coming soon*/
+p.alert_titulo {
+  padding: 0px 0px 0px 0px;
+  font-family: 'Pixel Operator';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/*divisória pontilhada*/
+div.divider_dotted {
+  border: none;
+  border-top: 1px dotted #000;
+  margin: 10px 0px 10px 0px;
+  width: 100%;
+}
+
+/*barra de rolagem*/
+::-webkit-scrollbar{
+  width:13px;
+}
+
+::-webkit-scrollbar-track:vertical{
+  background:linear-gradient(90deg,#e5e5e5,#f0f0f0 20%);
+  border-radius:3px;
+}
+
+::-webkit-scrollbar-thumb{
+  border:1.5px solid #888;
+  border-radius:3px;
+  box-shadow:inset 0 -1px 1px var(--branco),inset 0 1px 1px var(--branco);
+}
+
+::-webkit-scrollbar-thumb:vertical{
+  background:linear-gradient(90deg,#eee 45%,#ddd 0,#bbb);
+}
+
+::-webkit-scrollbar-button:vertical{
+  height:10px;
+}
+
+::-webkit-scrollbar-button:vertical:start{
+  background:var(--branco);
+  background: url('/assets/imgs/scrollstart.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  -moz-background-size:100% auto,cover;
+  -webkit-background-size:100% auto,cover;
+  -o-background-size:100% auto,cover;
+  background-size:100% auto,cover;
+  border:1.5px solid #888;
+  border-radius:3px;
+}
+
+::-webkit-scrollbar-button:vertical:end{
+  background:var(--branco);
+  background:url('/assets/imgs/scrollend.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  -moz-background-size:100% auto,cover;
+  -webkit-background-size:100% auto,cover;
+  -o-background-size:100% auto,cover;
+  background-size:100% auto,cover;
+  border:1.5px solid #888;
+  border-radius:3px;
+}
+
+/*botao*/
+/* style.css - Alteração necessária para incluir o <a> */
+button, a.botoes { /* Aplica o estilo de base que estava em 'button' */
+  background: var(--submenu);
+  border: 1px solid #848484;
+  border-radius: 3px;
+  box-shadow: var(--submenu);
+  box-sizing: border-box;
+  color: #000;
+  min-height: 28px;
+  min-width: 75px;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  font-family: 'Pixel Operator';
+  font-size: 0.850rem;
+  letter-spacing: 2px;
+  filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(114, 114, 114, 0.25));
+  text-decoration: none; 
+}
+
+/* Os pseudoelementos para hover/active */
+button:after, 
+button:before,
+a.botoes:after,
+a.botoes:before {
+  content: "";
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0; 
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity .3s;
+  width: 100%;
+  z-index: -1;
+  background: var(--botao);    
+}
+
+/* Hover e Active */
+button:not(:disabled):hover,
+a.botoes:hover {
+  border-color: #797979; 
+  transition: border-color .3s;
+}
+
+button:not(:disabled):hover:before,
+a.botoes:hover:before {
+  opacity: 1; 
+  transition: opacity .3s;
+}
+
+button:not(:disabled):active,
+a.botoes:active {
+  border-color: var(-); /* Use a variável correta, se houver */
+  transition: border-color .3s;
+}
+button:not(:disabled):active:after,
+a.botoes:active:after {
+  opacity: 1; 
+  transition: opacity .3s;
+}
+
+/*gatinho do rodapé*/
+footer .cat {
+  background-image: url(./assets/icons/cat.gif);
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-in-out;
+  z-index: 10;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  cursor: grab;
+}
+
+/*gatinho do rodapé ao passar o mouse*/
+footer .cat:hover {
+  bottom: -35px;
+}
+
+/*descrições dos icons para acessibilidade*/
+span.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*media queries para responsividade de telas*/
+
+/* para tablets (768px ou mais) */
+@media (min-width: 768px) {
+
+  #posts_divider {
+    background-size: 120%;
+  }
+
+  div.alert_img {
+    background-size: 60%;
+    padding: 40px 0px 0px 0px;
+  }
+  div.title_bar_text{
+    font-family: 'MS PGothic';
+    font-size:11px;
+  }
+  
+  nav.main_menu > ul > li > a {
+    font-size: 0.75rem;
+    font-family: 'MS PGothic', sans-serif;
+  }
+  
+  ul.submenu li a {
+    font-family: 'MS PGothic', sans-serif;
+    font-size: 0.75rem;
+  }
+  
+  p.alert_titulo {
+    font-family: 'MS PGothic';
+    font-size: 0.75rem;
+  }
+
+  h1.titulo {
+    font-family: 'MS PGothic';
+    font-size: 1.35rem;
+  }
+
+  h2.subtitulo {
+    font-family: 'MS PGothic';
+    font-size: 1.36rem;
+  }
+
+  .subtitulo_faculdade {
+    margin-top: 70px;
+}
+
+  p.paragrafo {
+    font-family: 'MS PGothic';
+  }
+
+  p.quote{
+    font-family: 'MS PGothic';
+  }
+}
+
+/* para notebook (1240px ou mais) */
+@media (min-width: 1240px) {
+
+  nav.main_menu > ul {
+    justify-content: left;
+  }
+
+  #container {
+    width: 40%;
+    height: 90%;
+  }
+
+  #posts_divider {
+    background-size: 150%;
+  }
+
+  h1.titulo {
+    font-size: 0.93rem;
+  }
+
+  h2.subtitulo {
+    font-size: 0.93rem;
+  }
+
+  p.paragrafo {
+    font-size: 0.800rem;
+  }
+
+  p.quote{
+    font-size: 0.75rem;
+  }
+}
+
+/* para monitores médios (1440px ou mais) */
+@media (min-width: 1440px) {
+  #container {
+    width: 40%;
+  }
+
+  #posts_divider {
+    background-size: 130%;
+  }
+  
+  h1.titulo {
+    font-size: 1.40rem;
+    font-family: 'MS PGothic';
+  }
+
+/*texto subtítulo*/
+  h2.subtitulo {
+    font-size: 1.40rem;
+    letter-spacing:2px;
+  }
+
+  .subtitulo_faculdade {
+    margin-top: 50px;
+}
+
+  p.paragrafo {
+    font-size: 0.900rem;
+  }
+
+  p.quote{
+    font-size: 0.80rem;
+  }  
+}
+
+/* para monitores grandes (1920px ou mais) */
+@media (min-width: 1920px) {
+  #container {
+    width: 30%;
+    height: 80%;
+  }
+
+  div.window {
+    height: 84%;
+  }
+
+  h1.titulo {
+    font-size: 1.40rem;
+  }
+
+  h2.subtitulo {
+    font-size: 1.40rem;
+    letter-spacing:2px;
+  }
+}

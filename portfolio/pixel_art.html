@@ -1,0 +1,128 @@
+<!DOCTYPE html><!-- o documento é feito na linguagem de marcação HTML -->
+  <html lang="pt-br"> <!-- o idioma utilizado na página será português brasileiro -->
+    
+    <head><!-- head parte que não será exibida na página -->
+      <meta charset="UTF-8"> <!-- exibe todos os assentos, pontuações e carácteres especiais -->
+      <meta http-equiv="X-UA-Compatible" content="=IE-Edge"> <!-- utilize a versão mais recente do Edge -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibe a página nas escalas dos dispositivos abertos (desktop ou mobile) -->    
+      <link href="../assets/css/style.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
+      <link href="../assets/css/portfolio.css" rel="stylesheet"/> <!-- utiliza a linguagem de estilização CSS para a página -->
+      <link href="../assets/icons/shortcut2.png" rel="shortcut icon"/>
+      <!-- título da página -->
+      <title>Pixel Art</title>
+    </head>
+
+    <body>
+      <div>
+        <div id="container"> 
+        <div class="window"> 
+        <div class="title_bar">
+        <div class="title_bar_text"> 
+        <img icon src="../assets/icons/wing.png" alt="Ícone de uma asa estilizada"/>  
+        <b>DUDA</b></div>
+      </div> 
+
+      <nav class="main_menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+
+          <li class="has_submenu">
+            <a href="#" aria-haspopup="true">Curriculum</a>
+              <ul class="submenu">
+                <li><a href="../curriculum/work_experience.html">Work Experience</a></li>
+                <li><a href="../curriculum/education.html">Education</a></li>
+                <li><a href="../curriculum/certifications.html">Certifications</a></li>
+              </ul>
+          </li>
+        
+          <li class="has_submenu">
+            <a href="#" aria-haspopup="true">Portfolio</a>
+              <ul class="submenu">
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="pixel_art.html">Pixel Art</a></li>
+              </ul>
+          </li>
+        
+          <li class="has_submenu">
+            <a href="#" aria-haspopup="true">Contacts</a>
+              <ul class="submenu">
+                <li><a href="https://wa.me/5516994153536" target="_blank">WhatsApp</a></li>
+                <li><a href="mailto:mariadudacurto@gmail.com" target="_blank">E-mail</a></li>
+              </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="window_body">
+        <div id="posts_divider">
+
+          <div class="alert_img"></div>
+          <p class="alert_titulo">Coming soon...</p>
+
+          <div class ="divider_dotted"></div>
+
+          <h1 class="titulo">Pixel Art</h1>
+
+          <main class="colunas">
+
+            <div class="pixelart"
+            modal-img-src="../assets/icons/cat.gif" >
+              <figure>
+                <img src="../assets/icons/cat.gif">
+              </figure>
+            </div>
+
+            <div class="pixelart"
+            modal-img-src="../assets/imgs/template_portfolio.png" >
+              <figure>
+                <img src="../assets/imgs/template_portfolio.png">
+              </figure>
+            </div>
+
+            <div class="pixelart"
+            modal-img-src="../assets/imgs/template_portfolio.png" >
+              <figure>
+                <img src="../assets/imgs/template_portfolio.png">
+              </figure>
+            </div>
+
+            <div class="pixelart"
+            modal-img-src="../assets/imgs/template_portfolio.png" >
+              <figure>
+                <img src="../assets/imgs/template_portfolio.png">
+              </figure>
+            </div>
+
+          </main>
+        
+        </div>
+
+      </div>
+
+    </div></div> 
+
+    <footer>
+      <div class="cat"></div>
+    </footer>
+
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="window_modal_content">
+        <div class="title_bar">
+          <div class="title_bar_text" style="margin: 8px;">
+            <span id="modal-title">
+          </div>
+          <button id="modal-close-btn" class="modal-close-btn" aria-label="Fechar"></button>
+        </div>
+        <div class="window_body modal-body">
+            <img id="modal-img" src="" alt="Imagem do projeto em tamanho maior">
+        </div>
+      </div>
+    </div>
+
+          <!-- barulho ao clicar -->
+          <script src="../assets/js/clicksound.js" defer></script>
+          <!-- estrelas no cursor -->
+          <script src="../assets/js/stars-cursor.js" defer></script>
+          <script src="../assets/js/modal.js" defer></script>
+  </body>
+</html>

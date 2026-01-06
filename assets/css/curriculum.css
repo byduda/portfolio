@@ -1,0 +1,340 @@
+/*work experiences/education/certifications*/
+
+main.colunas {
+    display: flex; 
+    margin: 0px 10px 0px 0px; 
+    align-items: stretch;
+    padding-top: 20px; 
+}
+
+/*coluna da timeline*/
+section.timeline {
+    display: flex;
+    flex-direction: column; 
+    margin: 100px -10px 0px -37px;
+}
+
+.timeline .timeline_education {
+    margin-top: -55px;
+}
+
+/*divisória da timeline*/
+div.timeline_divider {
+    width: 0px;
+    border-left: 2px dotted #000;
+    margin: 40px 40px 40px 49px;
+    display: flex;
+}
+
+/*data da timeline*/
+p.timeline_data{
+    font-family: 'Pixel Operator';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.900rem;
+    text-align: center;
+    margin-left: 5px;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+
+/*timeline TOTVS-AMAZON*/
+.timeline_item:first-child .timeline_divider {
+    height: 130px;
+}
+
+/*timeline AMAZON-OTO*/
+.timeline_item:nth-child(2) .timeline_divider {
+    height: 201px;
+}
+
+/*timeline OTO-ONER*/
+.timeline_item:nth-child(3) .timeline_divider {
+    height: 162px;
+}
+
+/*timeline ONER-ALFRED*/
+.timeline_item:nth-child(4) .timeline_divider {
+    height: 122px;
+}
+
+/*timeline ALFRED-ETUS*/
+.timeline_item:nth-child(5) .timeline_divider {
+    height: 142px;
+}
+
+/*timeline ETUS-BRASIL CENTER*/
+.timeline_item:nth-child(6) .timeline_divider {
+    height: 163px;
+}
+
+/*timeline BRASIL CENTER-COPERCANA*/
+.timeline_item:nth-child(7) .timeline_divider {
+    height: 138px;
+}
+
+/*timeline COPERCANA-NEXUS*/
+.timeline_item:nth-child(8) .timeline_divider {
+    height: 110px;
+}
+
+/*coluna das experiencias*/
+section.experiencias{
+    min-width: 0px;
+    width: 480px;
+    margin: 0px 0px 0px -15px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+}
+
+/*experiencia*/
+div.experiencia{
+    margin: 0px 0px 20px 0px;
+}
+
+/*texto cargos*/
+p.cargos{
+    font-family: 'Pixel Operator';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.900rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin:10px 0px 5px 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+
+/*formatação do texto aos itens da lista (li)*/
+ul.funcoes li {
+    font-family: 'Pixel Operator';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.900rem;
+    letter-spacing: 1.5px;
+    text-align: justify;
+    list-style-type: none;
+    margin: -5px 0px 10px 15px;
+}
+
+a.download_icon {
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: filter 0.20s, transform 0.20s;
+    background-image: url(/assets/icons/download.svg);
+    margin: 10px 0px 0px 10px;
+    display: flex;
+}
+
+a.download_icon:hover {
+    filter: invert(70%);
+    transform: scale(1.05);
+}
+
+/*media queries para responsividade de telas*/
+
+/* para tablets (768px ou mais) */
+@media (min-width: 768px) {
+
+    /*coluna da timeline no tablet*/
+    section.timeline {
+        margin: 40px 10px 0px -20px;
+    }
+
+    .timeline .timeline_education {
+    margin-top: -15px;
+}
+
+    /*timeline TOTVS-AMAZON no tablet*/
+    .timeline_item:first-child .timeline_divider {
+        height: 37px;
+    }
+
+    /*timeline AMAZON-OTO no tablet*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 55px;
+    }
+
+    /*timeline OTO-ONER no tablet*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 55px;
+    }
+
+    /*timeline ONER-ALFRED no tablet*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 50px;
+    }
+
+    /*timeline ALFRED-ETUS no tablet*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 55px;
+    }
+
+    /*timeline ETUS-BRASIL CENTER no tablet*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 80px;
+    }
+
+    /*timeline BRASIL CENTER-COPERCANA no tablet*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 55px;
+    }
+
+    /*timeline COPERCANA-NEXUS no tablet*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 35px;
+    }
+    /*data da timeline no tablet*/
+    p.timeline_data{
+        font-size: 0.750rem;
+        font-family: 'MS PGothic';
+    }
+
+    /*texto cargos no tablet*/
+    p.cargos{
+        font-size: 0.750rem;
+        font-family: 'MS PGothic';
+        letter-spacing: 1.1px;
+    }
+
+    /*formatação do texto aos itens da lista (li) no tablet*/
+    ul.funcoes li{
+        font-size: 0.750rem;
+        font-family: 'MS PGothic';
+    }
+
+}
+
+/* para notebook (1240px ou mais) */
+@media (min-width: 1240px) {
+
+    /*timeline TOTVS-AMAZON no notebook*/
+    .timeline_item:first-child .timeline_divider {
+        height: 60px;
+    }
+
+    /*timeline AMAZON-OTO no notebook*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 75px;
+    }
+
+    /*timeline OTO-ONER no notebook*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 70px;
+    }
+
+    /*timeline ONER-ALFRED no notebook*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 48px;
+    }
+
+    /*timeline ALFRED-ETUS no notebook*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 59px;
+    }
+
+    /*timeline ETUS-BRASIL CENTER no notebook*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 73px;
+    }
+
+    /*timeline BRASIL CENTER-COPERCANA no notebook*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 60px;
+    }
+
+    /*timeline COPERCANA-NEXUS no notebook*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 60px;
+    }
+
+}
+
+/* para monitores médios (1440px ou mais) */
+@media (min-width: 1440px) {
+
+    /*timeline TOTVS-AMAZON no monitor médio*/
+    .timeline_item:first-child .timeline_divider {
+        height: 58px;
+    }
+
+    /*timeline AMAZON-OTO no monitor médio*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 70px;
+    }
+
+    /*timeline OTO-ONER no monitor médio*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 86px;
+    }
+
+    /*timeline ONER-ALFRED no monitor médio*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 54px;
+    }
+
+    /*timeline ALFRED-ETUS no monitor médio*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 70px;
+    }
+
+    /*timeline ETUS-BRASIL CENTER no monitor médio*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 74px;
+    }
+
+    /*timeline BRASIL CENTER-COPERCANA no monitor médio*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 82px;
+    }
+
+    /*timeline COPERCANA-NEXUS no monitor médio*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 58px;
+    }
+
+}
+
+/* para monitores grandes (1920px ou mais) */
+@media (min-width: 1920px) {
+
+/*timeline AMAZON-OTO no monitor grande*/
+    .timeline_item:nth-child(2) .timeline_divider {
+        height: 65px;
+    }
+
+    /*timeline OTO-ONER no monitor grande*/
+    .timeline_item:nth-child(3) .timeline_divider {
+        height: 60px;
+    }
+
+    /*timeline ONER-ALFRED no monitor grande*/
+    .timeline_item:nth-child(4) .timeline_divider {
+        height: 55px;
+    }
+
+    /*timeline ALFRED-ETUS no monitor grande*/
+    .timeline_item:nth-child(5) .timeline_divider {
+        height: 65px;
+    }
+
+    /*timeline ETUS-BRASIL CENTER no monitor grande*/
+    .timeline_item:nth-child(6) .timeline_divider {
+        height: 85px;
+    }
+
+    /*timeline BRASIL CENTER-COPERCANA no monitor grande*/
+    .timeline_item:nth-child(7) .timeline_divider {
+        height: 60px;
+    }
+
+    /*timeline COPERCANA-NEXUS no monitor grande*/
+    .timeline_item:nth-child(8) .timeline_divider {
+        height: 46px;
+    }
+
+}
