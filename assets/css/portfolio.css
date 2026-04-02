@@ -54,6 +54,14 @@ div.template figure, div.pixelart figure {
 div.pixelart figure {
     border-radius: 6px;
     border-top: 1px dotted #292929;
+    /* Agora ele ocupa 100% do elemento pai (div.pixelart), que já tem 50% da tela */
+    width: 100%; 
+    height: 158.188px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: transparent;
 }
 
   
@@ -90,9 +98,10 @@ div.pixelart figure:after {
 
 div.template figure:hover:before,
 div.template figure:hover:after,
-div.pixelart figure:hover:before{
+div.pixelart figure:hover:before,
+div.pixelart figure:hover:after { /* Adicione esta linha */
   opacity: 1;
-  transition-delay:0;
+  transition-delay: 0;
 }
   
   div.template figure img, 
@@ -102,6 +111,17 @@ div.pixelart figure:hover:before{
     height: 100%;
     object-fit: cover;
 }
+
+div.pixelart figure img {
+    display: block;
+    width: auto;         /* Tamanho original da imagem */
+    height: auto;        /* Tamanho original da imagem */
+    max-width: 100%;     /* Proteção para não estourar o quadrado */
+    max-height: 100%;    /* Proteção para não estourar o quadrado */
+    object-fit: none;    /* Garante que o navegador não tente redimensionar */
+    image-rendering: pixelated; 
+}
+
   
 div.template_botoes {
     display: flex;
@@ -153,16 +173,74 @@ flex-direction: column;
 width: 90%;
 }
 
+/* --- Estilos Base do Modal (Comum a todos) --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0; /* Atalho para top, left, width, height */
+    background-color: #70707099;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+div.window_modal_content {
+    border: 1px solid var(--preto);
+    box-shadow: 2px 2px 10px 1px #4f4f4f, inset 0 0 0 1px #fffa;
+    position: relative;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    background: #f0f0f0; /* Garante fundo sólido */
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+/* O "segredo": Por padrão, o modal se ajusta ao conteúdo */
 .modal-body {
     padding: 15px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal-body img {
-    width: 100%;
     border: 1px solid #848484;
+    display: block;
+    box-sizing: border-box; /* Fundamental: a borda agora fica "para dentro" */
+    max-width: 100%;        /* Garante que não passe da largura do modal */
 }
 
-/* Botão de fechar */
+/* --- Modal de TEMPLATES (Tamanho fixo/maior) --- */
+/* Quando o overlay NÃO tem a classe .modal-pixel */
+.modal-overlay:not(.modal-pixel) .window_modal_content {
+    width: 90%;
+    height: 50%;
+}
+
+.modal-overlay:not(.modal-pixel) .modal-body img {
+    width: 100%;
+    height: auto;           /* Permite que a altura se ajuste proporcionalmente */
+    object-fit: contain;    /* Melhor que cover para ver a imagem inteira sem cortes */
+}
+
+/* --- Modal de PIXEL ART (Compacto) --- */
+.modal-pixel .window_modal_content {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+}
+
+.modal-pixel .modal-body img {
+    width: auto;
+    height: auto;
+    object-fit: none;
+}
+
+/* --- Botão de Fechar e Media Queries (Resumidos) --- */
 button.modal-close-btn {
     border: 1px solid #848484;
     cursor: pointer;
@@ -171,22 +249,18 @@ button.modal-close-btn {
     right: -0.5px;
     min-height: 27px;
     min-width: 55px;
-    box-shadow: 1px 1px 0px #fff;
     background: url('../icons/close_button.png') no-repeat 50%, var(--botao-fechar-sombra), var(--botao-fechar);
     box-shadow: #fffa inset 0 0 0 1px;
-    border-radius: 0px 5px 0px 5px;
-    filter: grayscale(100%) drop-shadow(0px 4px 4px rgba(114, 114, 114, 0.25));
-    transition-duration: 0.40s;
+    border-radius: 0 5px 0 5px;
+    filter: grayscale(100%);
+    transition: 0.4s;
 }
 
 .modal-close-btn:hover {
-    background: url('../icons/close_button.png') no-repeat 50%, var(--botao-fechar-sombra), var(--botao-fechar);
-    box-shadow: 0 0 7px 3px #e68e75, #fffa inset 0 0 0 1px;
     filter: none;
-    transition-duration: 0.60s;
-    border-radius: 0px 5px 0px 5px;
-
+    box-shadow: 0 0 7px 3px #e68e75, #fffa inset 0 0 0 1px;
 }
+
 
 /*media queries para responsividade de telas*/
 
@@ -199,10 +273,9 @@ button.modal-close-btn {
 
 /* para notebook (1240px ou mais) */
 @media (min-width: 1240px) {
-
-        div.window_modal_content{
-        height: 75%;
+    .modal-overlay:not(.modal-pixel) .window_modal_content {
         width: 55%;
+        height: 75%;
     }
 }
 
@@ -213,11 +286,9 @@ button.modal-close-btn {
 
 /* para monitores grandes (1920px ou mais) */
 @media (min-width: 1920px) {
-
-    div.window_modal_content{
-        height: 90%;
+    .modal-overlay:not(.modal-pixel) .window_modal_content {
         width: 50%;
+        height: 90%;
     }
-
 
 }
