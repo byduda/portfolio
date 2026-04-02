@@ -16,33 +16,30 @@ document.addEventListener('DOMContentLoaded', () => // aguarda todo o conteúdo 
         const actionButtons = document.querySelectorAll('.template .pixelart .botoes, .template .pixelart a.botoes');
 
         // função para abrir o modal
-        function openModal(item) 
-        {
-            // pega as informações dos data-attributes do item clicado
-            const title = item.getAttribute('modal-title'); // Adiciona fallback
-            const imgSrc = item.getAttribute('modal-img-src');
-            const description = item.getAttribute('modal-description');
-            const design = item.getAttribute('modal-design');
+        function openModal(item) {
+    const title = item.getAttribute('modal-title');
+    const imgSrcRaw = item.getAttribute('modal-img-src'); // Pega o texto com os caminhos
+    
+    modalTitle.textContent = title;
+    
+    // Limpa o conteúdo atual do corpo do modal para não acumular imagens de cliques anteriores
+    const modalBody = document.querySelector('.modal-body');
+    modalBody.innerHTML = ''; 
 
-            // preenche o modal com as informações
-            modalTitle.textContent = title;
-            modalImg.src = imgSrc;
-            modalImg.alt = `Imagem do projeto ${title}`;
-        
-            // verifica se os elementos existem antes de tentar preencher
-                if (modalDescription && description)
-                    {
-                        modalDescription.innerHTML = description;
-                    }
-        
-                if (modalDesign && design) 
-                    {
-                        modalDesign.innerHTML = design;
-                    }
+    // Transforma a string em um Array (lista) de caminhos
+    // O .split(',') corta o texto onde tem vírgula
+    const images = imgSrcRaw.split(',');
 
-            // mostra o modal
-            modalOverlay.style.display = 'flex';
-        }
+    images.forEach((src) => {
+        const newImg = document.createElement('img');
+        newImg.src = src.trim(); // .trim() remove espaços em branco extras
+        newImg.alt = `Imagem do projeto ${title}`;
+        newImg.className = 'modal-img-item'; // Classe para você estilizar no CSS
+        modalBody.appendChild(newImg);
+    });
+
+    modalOverlay.style.display = 'flex';
+}
 
         // função para fechar o modal
         function closeModal() 

@@ -200,11 +200,12 @@ div.window_modal_content {
 
 /* O "segredo": Por padrão, o modal se ajusta ao conteúdo */
 .modal-body {
-    padding: 15px;
-    overflow: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 15px; /* Espaço entre elas */
+    flex-wrap: wrap; /* Se não couber lado a lado (mobile), elas quebram a linha */
+    padding: 10px;
 }
 
 .modal-body img {
