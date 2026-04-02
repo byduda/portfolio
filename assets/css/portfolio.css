@@ -278,7 +278,14 @@ button.modal-close-btn {
         width: 55%;
         height: 75%;
     }
+
+    div.pixelart figure img {
+    image-rendering: auto;
 }
+
+
+}
+
 
 /* para monitores médios (1440px ou mais) */
 @media (min-width: 1440px) {
